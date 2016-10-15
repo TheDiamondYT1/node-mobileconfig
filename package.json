@@ -1,0 +1,11 @@
+{
+  "name": "node-mobileconfig",
+  "version": "1.0.0",
+  "description": "Create iOS mobileconfig configuration profiles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TheDiamondYT",
+  "license": "Apache-2.0"
+}

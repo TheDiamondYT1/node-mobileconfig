@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadDescription</key>
+	<string>{{description}}</string>
+	<key>PayloadDisplayName</key>
+	<string>{{displayName}}</string>
+	<key>PayloadIdentifier</key>
+	<string>{{identifier}}</string>
+	{{#if organization}}
+	<key>PayloadOrganization</key>
+	<string>{{organization}}</string>
+	{{/if}}
+	<key>PayloadRemovalDisallowed</key>
+	<{{notRemovable}}/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>3097fca9b1ec8942c4305e550ef1b50a</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			{{#if fullscreen}}
+			<key>FullScreen</key>
+			<true/>
+	        {{/if}}
+			<key>Label</key>
+			<string>{{label}}</string>
+			<key>PayloadDescription</key>
+			<string>Testing</string>
+			<key>PayloadDisplayName</key>
+			<string>Testing</string>
+			<key>PayloadIdentifier</key>
+			<string>aHR0cHM6Ly9naXRodWIuY29t</string>
+			<key>PayloadType</key>
+			<string>com.apple.webClip.managed</string>
+			<key>PayloadUUID</key>
+			<string>3097fca9b1ec8942c4305e550ef1b50a</string>
+			<key>PayloadVersion</key>
+			<real>1</real>
+			<key>Precomposed</key>
+			<true/>
+			<key>URL</key>
+			<string>{{url}}</string>
+		</dict>
+	</array>
+</dict>
+</plist>
