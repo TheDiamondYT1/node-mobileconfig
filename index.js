@@ -14,16 +14,21 @@ var generate = function (type, options, callback) {
 }
 
 var createWebClip = function (options, callback) {
+	var payload = options.payload;
+	
 	var data = {
-		displayName: options.displayName || 'Web clip',
-		description: options.description || false,
-		organization: options.organization || false,
-		notRemovable: options.notRemovable || false,
-		identifier: options.identifier || 'com.test',
+		payload: {
+			consentText: payload.consentText || false,
+			displayName: payload.displayName || 'Web clip',
+			description: payload.description || false,
+			organization: payload.organization || false,
+			notRemovable: payload.notRemovable || false,
+			identifier: payload.identifier || 'com.test'
+		},
 		
 		label: options.label || 'My websiite',
 		url: options.url || 'http://example.com',
-		fullscreen: options.fullscreen || true,
+		fullscreen: options.fullscreen || true,	
 	};
 	
 	if (callback) {

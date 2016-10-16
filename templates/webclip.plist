@@ -2,18 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	{{#if payload.consentText}}
+	<key>ConsentText</key>
+	<dict>
+		<key>default</key>
+		<string>{{payload.consentText}}</string>
+	</dict>
+	{{/if}}
 	<key>PayloadDescription</key>
-	<string>{{description}}</string>
+	<string>{{payload.description}}</string>
 	<key>PayloadDisplayName</key>
-	<string>{{displayName}}</string>
+	<string>{{payload.displayName}}</string>
 	<key>PayloadIdentifier</key>
 	<string>{{identifier}}</string>
-	{{#if organization}}
+	{{#if payload.organization}}
 	<key>PayloadOrganization</key>
-	<string>{{organization}}</string>
+	<string>{{payload.organization}}</string>
 	{{/if}}
 	<key>PayloadRemovalDisallowed</key>
-	<{{notRemovable}}/>
+	<{{payload.notRemovable}}/>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
